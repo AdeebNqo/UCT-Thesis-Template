@@ -1,0 +1,44 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass{harvard-thesis}
+
+\addbibresource{references.bib}
+\lstset{upquote=true}
+
+\begin{document}
+\justify
+
+% the front matter
+\input{frontmatter/coverpage}
+\maketitle
+%\copyrightpage 
+\abstractpage
+\tableofcontents
+%\authorlist
+%\listoffigures
+%\listoftables
+\dedicationpage
+\acknowledgments
+
+\onehalfspacing
+
+% include each chapter...
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+\include{chapters/chapter3}
+\include{chapters/chapter4}
+\include{chapters/chapter5}
+\include{chapters/chapter6}
+\include{chapters/tables}
+
+\singlespacing
+% the back matter
+\clearpage
+%\bibliography{references}
+%\bibliographystyle{ieeetr}
+\printbibliography
+\addcontentsline{toc}{chapter}{References}
+\include{endmatter/colophon}
+
+\end{document}
